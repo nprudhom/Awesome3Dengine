@@ -19,6 +19,9 @@
     <Filter Include="Header Files\Logger">
       <UniqueIdentifier>{ec34c258-0e00-4f2b-bcd7-19cb928e7b41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{cf8dcc23-6441-4495-8293-fbd1f4327403}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -38,6 +41,9 @@
     </ClInclude>
     <ClInclude Include="LoggerInterface.h">
       <Filter>Header Files\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\npr\Documents\3Dengine\Config\Export.h">
+      <Filter>Config</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

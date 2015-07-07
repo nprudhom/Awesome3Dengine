@@ -4,50 +4,52 @@
 #include <fstream>
 
 using namespace std;
-
-//----------------------------------------------------------
-// Dans la fenêtre de debug
-//----------------------------------------------------------
-class CLoggerDebug : public ILogger
+namespace yes
 {
-	virtual void Write(const string& Message)
+	//----------------------------------------------------------
+	// Dans la fenêtre de debug
+	//----------------------------------------------------------
+	class CLoggerDebug : public ILogger
 	{
-		OutputDebugString((LPCTSTR)(Message + '\n').c_str());
-	}
-};
+		virtual void Write(const string& Message)
+		{
+			OutputDebugString((LPCTSTR)(Message + '\n').c_str());
+		}
+	};
 
-//----------------------------------------------------------
-// Dans des boîtes de dialogue
-//----------------------------------------------------------
-class CLoggerMsgBox : public ILogger
-{
-	virtual void Write(const string& Message)
+	//----------------------------------------------------------
+	// Dans des boîtes de dialogue
+	//----------------------------------------------------------
+	class CLoggerMsgBox : public ILogger
 	{
-		MessageBox(NULL, (LPTSTR)(Message.c_str()), L"Yes::Engine", MB_OK);
-	}
-};
+		virtual void Write(const string& Message)
+		{
+			MessageBox(NULL, (LPTSTR)(Message.c_str()), L"Yes::Engine", MB_OK);
+		}
+	};
 
 
-//----------------------------------------------------------
-// Dans un fichier
-//----------------------------------------------------------
-class CLoggerFile : public ILogger
-{
-private :
-	ofstream m_File;
-
-public:
-
-	CLoggerFile(const string& Filename = "Output.log") : m_File(Filename)
+	//----------------------------------------------------------
+	// Dans un fichier
+	//----------------------------------------------------------
+	class CLoggerFile : public ILogger
 	{
+	private:
+		ofstream m_File;
 
-	}
+	public:
 
-private:
+		CLoggerFile(const string& Filename = "Output.log") : m_File(Filename)
+		{
 
-	virtual void Write(const string& Message)
-	{
-		m_File << Message;
-	}
+		}
 
-};
+	private:
+
+		virtual void Write(const string& Message)
+		{
+			m_File << Message;
+		}
+
+	};
+}
