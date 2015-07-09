@@ -22,6 +22,18 @@
     <Filter Include="Config">
       <UniqueIdentifier>{cf8dcc23-6441-4495-8293-fbd1f4327403}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\MemoryManager">
+      <UniqueIdentifier>{66b9ef43-8b19-4254-8785-0e52996900bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{1ad6418c-745a-4ec8-8e93-4553d6db01d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MemoryManager">
+      <UniqueIdentifier>{38dede73-7627-4f26-ae85-8acaa8a5b603}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{46a7d401-5dbb-4c58-bf70-a36b5f298f33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -42,8 +54,20 @@
     <ClInclude Include="LoggerInterface.h">
       <Filter>Header Files\Logger</Filter>
     </ClInclude>
-    <ClInclude Include="C:\Users\npr\Documents\3Dengine\Config\Export.h">
+    <ClInclude Include="Config\Export.h">
       <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugNew.h">
+      <Filter>Header Files\MemoryManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryManager.h">
+      <Filter>Header Files\MemoryManager</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Exceptions.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +79,18 @@
     </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>Source Files\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManager.cpp">
+      <Filter>Source Files\MemoryManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>Source Files\Utilities</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

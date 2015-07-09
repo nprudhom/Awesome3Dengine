@@ -4,7 +4,7 @@
 #include <string>
 
 using namespace std;
-namespace yes
+namespace Yes
 {
 	class YES_EXPORT ILogger
 	{
@@ -31,12 +31,21 @@ namespace yes
 		static ILogger& Log();
 		template <class T> ILogger& operator <<(const T& ToLog);
 
+		string CurrentDate() const;
+
+		string CurrentTime() const;
+
 	private:
 
 		//----------------------------------------------------------
 		// Inscrit un message - à redéfinir dans les classes dérivées
 		//----------------------------------------------------------
 		virtual void Write(const std::string& Message) = 0;
+
+		//----------------------------------------------------------
+		// Détruit l'instance du logger
+		//----------------------------------------------------------
+		static void Destroy();
 
 		//----------------------------------------------------------
 		// Données membres

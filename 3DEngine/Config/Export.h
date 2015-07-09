@@ -14,9 +14,9 @@ namespace Yes
     // Macro d'exportation / importation
     //==========================================================
     #ifdef YESENGINE_EXPORTS
-    #   define YES_EXPORT __declspec(dllexport)
-    #else
     #   define YES_EXPORT __declspec(dllimport)
+    #else
+    #   define YES_EXPORT __declspec(dllexport)
     #endif
 
     //==========================================================
